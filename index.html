@@ -1,0 +1,429 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="apple-touch-icon" type="image/png"
+        href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg"
+        color="#111">
+
+
+
+
+    <script
+        src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
+    <title>CSS Animated Header</title>
+
+    <link rel="canonical" href="https://codepen.io/nodws/pen/aWgMMQ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 120%;
+            font-family: "Montserrat", sans-serif;
+
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        .navbar-hide {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .header {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: flex-start;
+            height: 70vw;
+            min-height: 400px;
+            max-height: 750px;
+            min-width: 300px;
+            color: #eee;
+            border-radius: 0 0 20px 20px;
+            text-shadow: 0 2px 6px #000a
+        }
+
+        .header:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 40%, rgba(27, 32, 48, 1) 100%);
+        }
+
+        .header:before {
+            content: "";
+            width: 100%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translateZ(0);
+            backface-visibility: hidden;
+            scale(1.0, 1.0);
+            transform: translateZ(0);
+            background: #1B2030 url(https://lp-cms-production.imgix.net/2023-04/shutterstock_512405101.jpg?fbclid=IwY2xjawKaXsNleHRuA2FlbQIxMQABHlkj16tn9jcGjCvtGvh6DXF7AUIJKRNl-AEkjT5qPWw7pdP9tQSSHTrYPyrZ_aem_RjfL_rwLxLI7RYKgZBXsng) 50% 0 no-repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+            animation: grow 360s linear 10ms infinite;
+            transition: all 0.4s ease-in-out;
+            z-index: -2
+        }
+
+        .header a {
+            color: #eee
+        }
+
+        .title-home {
+            font-family: "Noto Sans JP", sans-serif;
+            font-optical-sizing: auto;
+            font-size: 100px;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .menu {
+            display: block;
+            width: 40px;
+            height: 30px;
+            border: 2px solid #fff;
+            border-radius: 3px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            text-decoration: none
+        }
+
+        .menu:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 3px;
+            background: #fff;
+            position: absolute;
+            margin: 0 auto;
+            top: 5px;
+            left: 0;
+            right: 0;
+            box-shadow: 0 8px, 0 16px
+        }
+
+        .logo {
+            border: 2px solid #fff;
+            border-radius: 3px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            align-content: center;
+            margin: 20px;
+            padding: 0px 10px;
+            font-weight: 900;
+            font-size: 1.1em;
+            line-height: 1;
+            box-sizing: border-box;
+            height: 40px
+        }
+
+        .info {
+            flex: 0 0 auto;
+            width: 50%
+        }
+
+        .info {
+            width: 100%;
+            padding: 15% 10% 0 10%;
+            text-align: center;
+        }
+
+        .author {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: url(https://i.imgur.com/6DLCsZcb.jpg) center no-repeat;
+            background-size: cover;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+            margin-bottom: 3px
+        }
+
+        .info h4,
+        .meta {
+            font-size: 0.7em
+        }
+
+        .meta {
+            font-style: italic;
+        }
+
+        @keyframes grow {
+            0% {
+                transform: scale(1) translateY(0px)
+            }
+
+            50% {
+                transform: scale(1.2) translateY(-400px)
+            }
+        }
+
+        .content {
+            padding: 5% 10%;
+            text-align: justify
+        }
+
+        .btn {
+            color: #333;
+            border: 2px solid;
+            border-radius: 3px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            font-weight: 600
+        }
+
+
+        .twtr {
+            margin-top: 100px
+        }
+
+        .btn.twtr:after {
+            content: "\1d54f";
+            padding-left: 5px
+        }
+
+
+
+
+
+
+        /* Navbar base styles */
+        #mainNav {
+            transition: all 0.3s ease-in-out;
+            background-color: transparent !important;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        /* Navbar when scrolled */
+        #mainNav.navbar-scrolled {
+            background-color: #eee !important;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
+        /* Logo styles */
+        .logo {
+            border: 2px solid #fff;
+            border-radius: 3px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            align-content: center;
+            margin: 20px;
+            padding: 0px 10px;
+            font-weight: 900;
+            font-size: 1.1em;
+            line-height: 1;
+            box-sizing: border-box;
+            height: 40px;
+            transition: all 0.3s ease;
+        }
+
+        /* Nav link styles */
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-scrolled .nav-link {
+            color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        .navbar-scrolled .nav-link:hover {
+            color: #000 !important;
+        }
+
+        /* Toggler icon styles */
+        .svg-inline--fa {
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: -0.125em;
+            color: white;
+        }
+
+        .navbar-scrolled .svg-inline--fa {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .navbar-toggler {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid transparent;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+    <script>
+        //# sourceURL=pen.js
+
+        window.addEventListener('DOMContentLoaded', () => {
+            let scrollPos = 0;
+            const mainNav = document.getElementById('mainNav');
+            const headerHeight = mainNav.clientHeight;
+            window.addEventListener('scroll', function () {
+                const currentTop = document.body.getBoundingClientRect().top * -1;
+                if (currentTop < scrollPos) {
+                    // Scrolling Up
+                    if (currentTop > 0 && mainNav.classList.contains('is-fixed')) {
+                        mainNav.classList.add('is-visible');
+                    } else {
+                        console.log(123);
+                        mainNav.classList.remove('is-visible', 'is-fixed');
+                    }
+                } else {
+                    // Scrolling Down
+                    mainNav.classList.remove(['is-visible']);
+                    if (currentTop > headerHeight && !mainNav.classList.contains('is-fixed')) {
+                        mainNav.classList.add('is-fixed');
+                    }
+                }
+                scrollPos = currentTop;
+            });
+        })
+    </script>
+
+</head>
+
+<body translate="no">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="logo navbar-brand" href="index.html">Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="svg-inline--fa fa-bars" aria-hidden="true" focusable="false" data-prefix="fas"
+                    data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                    data-fa-i2svg="">
+                    <path fill="currentColor"
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z">
+                    </path>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="header">
+        <!-- <div class="sides">
+            <a href="#" class="logo">BLOG</a>
+        </div> -->
+        <!-- <div class="sides"> <a href="#" class="menu" id="openMenu"> </a></div> -->
+        <div class="info">
+            <h4>Readings in Philippine History</h4>
+            <h1 class="title-home">Wonders of Daraga</h1>
+            <div class="meta">
+                <a href="https://x.com/nodws" target="_b" class="author"></a><br>
+                By <a href="https://X.com/nodws" target="_b">Eury Marc Suhi-an, Carl Johannes Munoz, Rey Kristian Aure,
+                    Sean Margarata.</a>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <p>Embark on a digital odyssey through awe-inspiring landscapes and echoes of ancient lore—a realm where
+            nature’s raw majesty and
+            the legacy of civilizations entwine. Traverse a land shaped by the primal force of fire and the enduring
+            power of faith, where
+            every horizon murmurs myth and every stone breathes history. From the sublime drama of volcanic peaks to the
+            intricate grace of
+            timeless architecture, this is more than a journey—it is a reverent invitation to explore, to remember, and
+            to stand in wonder.
+            Here, the past and present converge in a tapestry of breathtaking beauty.</p>
+        <p align="center"><a href="https://x.com/nodws" class="btn twtr" target="_b">Follow me on Xitter</a>
+        </p>
+    </section>
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('mainNav');
+            const navbarHeight = navbar.offsetHeight;
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > navbarHeight) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+
+            // Initialize state on page load
+            if (window.scrollY > navbarHeight) {
+                navbar.classList.add('navbar-scrolled');
+            }
+        });
+
+        // Optional: Navbar hide on scroll down, show on scroll up
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function () {
+            const st = window.pageYOffset || document.documentElement.scrollTop;
+            const navbar = document.getElementById('mainNav');
+
+            if (st > lastScrollTop) {
+                // Scroll down
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // Scroll up
+                navbar.style.transform = 'translateY(0)';
+            }
+
+            // At top of page
+            if (st <= 0) {
+                navbar.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = st <= 0 ? 0 : st;
+        });
+    </script>
+
+</body>
+
+</html>
