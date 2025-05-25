@@ -8,7 +8,6 @@
 
 /* Navbar when scrolled */
 #mainNav.navbar-scrolled {
-    background-color: #eee !important;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -37,6 +36,12 @@
     color: white !important;
     font-weight: 500;
     transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: black !important;
+    transform: scale(1.2);
+    transition: all 0.2s ease;
 }
 
 .navbar-scrolled .nav-link {
