@@ -1,6 +1,5 @@
 /* Ensure the body doesn't have unnecessary height */
-html,
-body {
+html, body {
     margin: 0;
     height: auto;
     /* Changed from 120% */
