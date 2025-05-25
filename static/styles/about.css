@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 html,
 body {
     margin: 0;
@@ -13,7 +11,6 @@ a {
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
 }
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 .header {
     position: relative;
     overflow: hidden;
@@ -30,9 +27,6 @@ a {
     border-radius: 0 0 20px 20px;
     text-shadow: 0 2px 6px #000a
 }
-<<<<<<< HEAD
-
-=======
 .header:after {
     content: "";
     width: 100%;
@@ -72,7 +66,6 @@ a {
 .header a {
     color: #eee
 }
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 .title-home {
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
@@ -82,27 +75,15 @@ a {
     line-height: 1.2;
     font-size: clamp(2.5rem, 8vw, 6rem);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 .info {
     flex: 0 0 auto;
     width: 50%
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 .info {
     width: 100%;
     padding: 15% 10% 0 10%;
     text-align: center;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 .author {
     display: inline-block;
     width: 50px;
@@ -113,65 +94,33 @@ a {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     margin-bottom: 3px
 }
-<<<<<<< HEAD
-
 .info h4 {
     font-size: clamp(0.9rem, 2.5vw, 1.2rem);
 }
-
-=======
-.info h4 {
-    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-}
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 .meta {
     font-size: clamp(0.8rem, 2vw, 1rem);
     margin-top: 1em;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 @media (min-width: 768px) {
     .info {
         padding: 15% 10% 0 10%;
     }
 }
-<<<<<<< HEAD
-
 .meta {
     font-style: italic;
 }
-
-=======
-.meta {
-    font-style: italic;
-}
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 @keyframes grow {
     0% {
         transform: scale(1) translateY(0px)
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
     50% {
         transform: scale(1.2) translateY(-400px)
     }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 .content {
     padding: 5% 10%;
     text-align: justify
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 .btn {
     color: #333;
     border: 2px solid;
@@ -181,26 +130,13 @@ a {
     padding: 5px 10px;
     font-weight: 600
 }
-<<<<<<< HEAD
-
-
 .twtr {
     margin-top: 100px
 }
-
-=======
-.twtr {
-    margin-top: 100px
-}
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 .btn.twtr:after {
     content: "\1d54f";
     padding-left: 5px
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 /* Navbar base styles */
 #mainNav {
     transition: all 0.3s ease-in-out;
@@ -208,10 +144,6 @@ a {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 /* Navbar when scrolled */
 #mainNav.navbar-scrolled {
     background-color: #eee !important;
@@ -219,10 +151,6 @@ a {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 /* Logo styles */
 .logo {
     border: 2px solid #fff;
@@ -240,34 +168,18 @@ a {
     height: 40px;
     transition: all 0.3s ease;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 /* Nav link styles */
 .nav-link {
     color: white !important;
     font-weight: 500;
     transition: all 0.3s ease;
 }
-<<<<<<< HEAD
-
-.navbar-scrolled .nav-link {
-    color: rgba(0, 0, 0, 0.7) !important;
-}
-
-.navbar-scrolled .nav-link:hover {
-    color: #000 !important;
-}
-
-=======
 .navbar-scrolled .nav-link {
     color: rgba(0, 0, 0, 0.7) !important;
 }
 .navbar-scrolled .nav-link:hover {
     color: #000 !important;
 }
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 /* Toggler icon styles */
 .svg-inline--fa {
     width: 1.5em;
@@ -275,17 +187,9 @@ a {
     vertical-align: -0.125em;
     color: white;
 }
-<<<<<<< HEAD
-
 .navbar-scrolled .svg-inline--fa {
     color: rgba(0, 0, 0, 0.7);
 }
-
-=======
-.navbar-scrolled .svg-inline--fa {
-    color: rgba(0, 0, 0, 0.7);
-}
->>>>>>> 9c562db7d5efac7adc344c1c2741a418d941bee0
 .navbar-toggler {
     padding: 0.25rem 0.5rem;
     border: 1px solid transparent;
