@@ -254,8 +254,16 @@
 @media (max-width: 768px) {
     .header {
         height: auto;
-        min-height: 100vh;
+        min-height: 100%;
         /* Changed from 300px to viewport height */
         max-height: none;
+    }
+
+    .content {
+        margin-top: 50px;
+    }
+
+    .info {
+        margin-top: 50px;
     }
 }
