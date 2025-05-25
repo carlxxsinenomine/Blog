@@ -1,6 +1,10 @@
-html, body {
+/* Ensure the body doesn't have unnecessary height */
+html,
+body {
     margin: 0;
-    height: 120%;
+    height: auto;
+    /* Changed from 120% */
+    min-height: 100vh;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -46,6 +50,7 @@ a {
         transform: scale(1) translateY(0);
         background-position: 0% 0%;
     }
+
     100% {
         transform: scale(1) translateY(0);
         background-position: 0% 100%;
