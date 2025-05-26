@@ -98,6 +98,9 @@
     padding-left: 5px
 }
 
+main {
+    margin-top: 50px;
+}
 /* Blog post styles */
 .blog-container {
     display: flex;
@@ -108,7 +111,7 @@
 
 .blog-post {
     display: flex;
-    gap: 20px;
+    gap: 25px; /* Increased gap between thumbnail and text */
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #eee;
@@ -119,8 +122,8 @@
 }
 
 .blog-thumbnail {
-    flex: 0 0 120px;
-    height: 120px;
+    flex: 0 0 180px; /* Increased from 120px to 180px */
+    height: 180px; /* Increased from 120px to 180px */
     border-radius: 8px;
     overflow: hidden;
 }
@@ -138,10 +141,13 @@
 
 .blog-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
 }
 
 .blog-meta {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: #666;
     margin-bottom: 8px;
 }
@@ -149,7 +155,7 @@
 .blog-title {
     font-size: 1.3rem;
     font-weight: 600;
-    margin: 0 0 10px 0;
+    margin: 0 0 1px 0;
     line-height: 1.3;
     color: #333;
 }
@@ -169,6 +175,20 @@
     color: #555;
     line-height: 1.5;
     margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .blog-post {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .blog-thumbnail {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 200px; /* Larger height for mobile */
+    }
 }
 
 /* Add this to your index.css */
