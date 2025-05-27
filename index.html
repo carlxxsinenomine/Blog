@@ -87,15 +87,16 @@
                         <!-- Blog Post 1 -->
                         <div class="blog-post">
                             <div class="blog-thumbnail">
-                                <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                                <img src="./static/images/mayon.jpg"
                                     alt="Luggage">
                             </div>
                             <div class="blog-info">
                                 <h3 class="blog-title">
-                                    <a href="./contents/mayon.html">Sean Margarata Masarap daw?</a>
+                                    <a href="./contents/mayon.html">Mount Mayon</a>
                                 </h3>
                                 <div class="blog-meta">Daraga, Albay</div>
-                                <p class="blog-description">Basahin ang opinion ni Sean HAHAHAhA</p>
+                                <p class="blog-description">DKiksadjfslhsshfdsahjfdskjfhskdjhfadskljfhdskjlfhsakldf
+                                    hdsakjlfkdjsffhsalkhfdalksjhfdsalkjhdsakjlhdsafkjh</p>
                             </div>
                         </div>
 
@@ -161,48 +162,7 @@
         </div>
     </main>
 
-    <script>
-        // Navbar background change on scroll
-        window.addEventListener('DOMContentLoaded', () => {
-            const navbar = document.getElementById('mainNav');
-            const navbarHeight = navbar.offsetHeight;
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > navbarHeight) {
-                    navbar.classList.add('navbar-scrolled');
-                } else {
-                    navbar.classList.remove('navbar-scrolled');
-                }
-            });
-
-            // Initialize state on page load
-            if (window.scrollY > navbarHeight) {
-                navbar.classList.add('navbar-scrolled');
-            }
-        });
-
-        // Optional: Navbar hide on scroll down, show on scroll up
-        let lastScrollTop = 0;
-        window.addEventListener('scroll', function () {
-            const st = window.pageYOffset || document.documentElement.scrollTop;
-            const navbar = document.getElementById('mainNav');
-
-            if (st > lastScrollTop) {
-                // Scroll down
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                // Scroll up
-                navbar.style.transform = 'translateY(0)';
-            }
-
-            // At top of page
-            if (st <= 0) {
-                navbar.style.transform = 'translateY(0)';
-            }
-
-            lastScrollTop = st <= 0 ? 0 : st;
-        });
-    </script>
+    <script src="js/global.js"></script>
 
 </body>
 

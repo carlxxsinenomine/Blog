@@ -31,6 +31,10 @@
     transition: all 0.3s ease;
 }
 
+.navbar-hide {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
 /* Nav link styles */
 .nav-link {
     color: white !important;
