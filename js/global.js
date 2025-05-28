@@ -1,40 +1,48 @@
-// Navbar background change on scroll
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('mainNav');
-    const navbarHeight = navbar.offsetHeight;
+    const header = document.querySelector('.header');
+    let lastScrollTop = 0;
+    const headerHeight = header.offsetHeight;
+    const scrollThreshold = 100;
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > navbarHeight) {
+    window.addEventListener('scroll', function() {
+        if (isMobile) return; // Skip scroll effects on mobile
+        
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // 1. Handle background change
+        if (currentScroll > headerHeight * 0.8) {
             navbar.classList.add('navbar-scrolled');
         } else {
             navbar.classList.remove('navbar-scrolled');
         }
+
+        // 2. Handle hide/show behavior
+        if (currentScroll > headerHeight) {
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down - hide navbar
+                if (currentScroll > headerHeight + scrollThreshold) {
+                    navbar.style.transform = 'translateY(-100%)';
+                    navbar.style.transition = 'transform 0.3s ease-in-out';
+                }
+            } else {
+                // Scrolling up - only show if near top
+                if (currentScroll < scrollThreshold) {
+                    navbar.style.transform = 'translateY(0)';
+                    navbar.style.transition = 'transform 0.2s ease-out';
+                }
+            }
+        } else {
+            // At top of page - always show
+            navbar.style.transform = 'translateY(0)';
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
 
-    // Initialize state on page load
-    if (window.scrollY > navbarHeight) {
+    // Initialize state
+    if (window.scrollY > headerHeight * 0.8 || isMobile) {
         navbar.classList.add('navbar-scrolled');
     }
-});
-
-// Optional: Navbar hide on scroll down, show on scroll up
-let lastScrollTop = 0;
-window.addEventListener('scroll', function () {
-    const st = window.pageYOffset || document.documentElement.scrollTop;
-    const navbar = document.getElementById('mainNav');
-
-    if (st > lastScrollTop) {
-        // Scroll down
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        // Scroll up
-        navbar.style.transform = 'translateY(0)';
-    }
-
-    // At top of page
-    if (st <= 0) {
-        navbar.style.transform = 'translateY(0)';
-    }
-
-    lastScrollTop = st <= 0 ? 0 : st;
 });
