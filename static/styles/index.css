@@ -63,19 +63,20 @@
 main {
     margin-top: 50px;
 }
+
 /* Blog post styles */
 .blog-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px; /* Increased gap between posts */
     margin-top: 40px;
 }
 
 .blog-post {
     display: flex;
-    gap: 25px; /* Increased gap between thumbnail and text */
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    gap: 30px; /* Increased gap between thumbnail and text */
+    margin-bottom: 40px; /* Increased bottom margin */
+    padding-bottom: 40px; /* Increased padding */
     border-bottom: 1px solid #eee;
 }
 
@@ -84,84 +85,93 @@ main {
 }
 
 .blog-thumbnail {
-    flex: 0 0 180px; /* Increased from 120px to 180px */
-    height: 180px; /* Increased from 120px to 180px */
-    border-radius: 8px;
+    flex: 0 0 300px; /* Increased width to 300px */
+    height: 250px; /* Increased height to 250px */
+    border-radius: 12px; /* Slightly larger border radius */
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-thumbnail:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
 }
 
 .blog-thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .blog-thumbnail:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1); /* Slightly larger zoom effect */
 }
 
 .blog-info {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center the content */
+    justify-content: center;
 }
 
 .blog-meta {
-    font-size: 0.7rem;
+    font-size: 0.9rem; /* Slightly larger */
     color: #666;
-    margin-bottom: 8px;
+    margin-bottom: 10px; /* Increased spacing */
 }
 
 .blog-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin: 0 0 1px 0;
+    font-size: 1.6rem; /* Larger title */
+    font-weight: 700; /* Bolder */
+    margin: 0 0 10px 0; /* Increased spacing */
     line-height: 1.3;
-    color: #333;
+    color: #222; /* Darker for better contrast */
 }
 
 .blog-title a {
     color: inherit;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .blog-title a:hover {
     color: #000;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .blog-description {
-    display: -webkit-box; /* For older browsers */
-    display: -moz-box; /* For older browsers */
-    display: box; /* Modern browsers */
-    -webkit-line-clamp: 3; /* Limit to 3 lines */
-    -moz-line-clamp: 3; /* Limit to 3 lines */
-    line-clamp: 3; /* Limit to 3 lines */
-    -webkit-box-orient: vertical; /* Vertical layout */
-    -moz-box-orient: vertical; /* Vertical layout */
-    box-orient: vertical; /* Vertical layout */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis */
-    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Show 4 lines now that we have more space */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1rem; /* Slightly larger text */
     color: #555;
-    line-height: 1.5;
+    line-height: 1.6; /* More breathing room */
     margin: 0;
-    max-height: 4.5em; /* Fallback for browsers that don't support line-clamp */
 }
+
 
 
 @media (max-width: 768px) {
     .blog-post {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
     }
     
     .blog-thumbnail {
         flex: 0 0 auto;
         width: 100%;
-        height: 200px; /* Larger height for mobile */
+        height: auto; /* Let height be determined by aspect ratio */
+        min-height: 250px; /* Set minimum height */
+        max-height: 350px; /* Set maximum height */
+    }
+    
+    .blog-thumbnail img {
+        object-fit: contain; /* Change to contain on mobile to prevent stretching */
+        background: #f5f5f5; /* Add background color for transparent PNGs */
     }
 }
 
