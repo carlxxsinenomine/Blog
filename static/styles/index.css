@@ -133,10 +133,22 @@ main {
 }
 
 .blog-description {
+    display: -webkit-box; /* For older browsers */
+    display: -moz-box; /* For older browsers */
+    display: box; /* Modern browsers */
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -moz-line-clamp: 3; /* Limit to 3 lines */
+    line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical; /* Vertical layout */
+    -moz-box-orient: vertical; /* Vertical layout */
+    box-orient: vertical; /* Vertical layout */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis */
     font-size: 1rem;
     color: #555;
     line-height: 1.5;
     margin: 0;
+    max-height: 4.5em; /* Fallback for browsers that don't support line-clamp */
 }
 
 
@@ -163,15 +175,4 @@ main {
     /* Makes the content scrollable when it exceeds max-height */
     margin-bottom: 20px;
     /* Adds some space below the content */
-}
-
-/* Update the header height for mobile */
-@media (max-width: 768px) {
-    main {
-        margin-top: 20px;
-    }
-    
-    .header {
-        margin-top: 56px; /* Height of navbar */
-    }
 }

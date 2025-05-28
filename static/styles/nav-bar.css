@@ -1,7 +1,6 @@
 /* Navbar base styles */
 #mainNav {
     transition: all 0.3s ease-in-out;
-    background-color: transparwhent !important;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
@@ -87,6 +86,10 @@
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 100px; /* or match your navbar's height */
+    }
+
     .navbar-collapse {
         width: 100%;
         background-color: white !important;
