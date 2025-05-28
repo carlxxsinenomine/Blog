@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastScrollTop = 0;
     const headerHeight = header.offsetHeight;
     const scrollThreshold = 100;
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const isMobile = window.matchMedia("(max-width: 991px)").matches;
 
     window.addEventListener('scroll', function() {
         if (isMobile) return; // Skip scroll effects on mobile

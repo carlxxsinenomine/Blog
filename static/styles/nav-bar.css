@@ -79,20 +79,13 @@
     border: 1px solid transparent;
 }
 
-/* Navbar when hidden */
-.navbar-hide {
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     body {
         padding-top: 100px; /* or match your navbar's height */
     }
 
     .navbar-collapse {
         width: 100%;
-        background-color: white !important;
         padding: 1rem 0;
     }
 
@@ -117,7 +110,6 @@
 
     .nav-link:hover,
     .nav-link:active {
-        background-color: #f8f9fa;
         transform: none !important;
     }
 
