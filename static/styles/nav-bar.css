@@ -112,7 +112,7 @@
         width: 100%;
         padding: 1rem 0.5rem; /* Taller touch target */
         color: #333 !important;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .nav-link:hover,
