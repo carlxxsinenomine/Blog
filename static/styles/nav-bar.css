@@ -1,7 +1,10 @@
 /* Navbar base styles */
 #mainNav {
     transition: all 0.3s ease-in-out;
+<<<<<<< HEAD
     background-color: transparent !important;
+=======
+>>>>>>> 27978456a68cfc9a301e02d5bf7bbd3ec713b0c2
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
@@ -74,4 +77,47 @@
 .navbar-toggler {
     padding: 0.25rem 0.5rem;
     border: 1px solid transparent;
+<<<<<<< HEAD
+=======
+}
+
+@media (max-width: 991px) {
+    body {
+        padding-top: 100px; /* or match your navbar's height */
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 1rem 0.5rem; /* Taller touch target */
+        color: #333 !important;
+        font-size: 1rem;
+    }
+
+    .nav-link:hover,
+    .nav-link:active {
+        transform: none !important;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+>>>>>>> 27978456a68cfc9a301e02d5bf7bbd3ec713b0c2
 }

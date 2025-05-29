@@ -1,7 +1,15 @@
 // Navbar background change on scroll
 window.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('mainNav');
+<<<<<<< HEAD
     const navbarHeight = navbar.offsetHeight;
+=======
+    const header = document.querySelector('.header');
+    let lastScrollTop = 0;
+    const headerHeight = header.offsetHeight;
+    const scrollThreshold = 100;
+    const isMobile = window.matchMedia("(max-width: 991px)").matches;
+>>>>>>> 27978456a68cfc9a301e02d5bf7bbd3ec713b0c2
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > navbarHeight) {
