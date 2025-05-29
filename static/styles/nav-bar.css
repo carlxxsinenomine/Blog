@@ -1,22 +1,15 @@
 /* Navbar base styles */
 #mainNav {
     transition: all 0.3s ease-in-out;
-<<<<<<< HEAD
-    background-color: transparent !important;
-=======
->>>>>>> 27978456a68cfc9a301e02d5bf7bbd3ec713b0c2
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
 
 /* Navbar when scrolled */
 #mainNav.navbar-scrolled {
-    background-color: #eee !important;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
 }
 
 /* Logo styles */
@@ -54,6 +47,13 @@
     transition: all 0.2s ease;
 }
 
+.navbar-scrolled {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: white !important;
+}
+
 .navbar-scrolled .nav-link {
     color: rgba(0, 0, 0, 0.7) !important;
 }
@@ -77,8 +77,6 @@
 .navbar-toggler {
     padding: 0.25rem 0.5rem;
     border: 1px solid transparent;
-<<<<<<< HEAD
-=======
 }
 
 @media (max-width: 991px) {
@@ -119,5 +117,4 @@
         margin-left: auto;
         margin-right: 15px;
     }
->>>>>>> 27978456a68cfc9a301e02d5bf7bbd3ec713b0c2
 }
