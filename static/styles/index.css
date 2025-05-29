@@ -167,11 +167,18 @@ main {
 
 /* Update the header height for mobile */
 @media (max-width: 768px) {
-    main {
-        margin-top: 20px;
-    }
-    
     .header {
-        margin-top: 56px; /* Height of navbar */
+        height: auto;
+        min-height: 100%;
+        /* Changed from 300px to viewport height */
+        max-height: none;
+    }
+
+    .content {
+        margin-top: 50px;
+    }
+
+    .info {
+        margin-top: 50px;
     }
 }
