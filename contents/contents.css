@@ -33,6 +33,10 @@
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 40%, rgba(27, 32, 48, 1) 100%);
         }
 
+        :root {
+             --header-bg-image: url("../static/images/mayon.jpg");
+        }
+
         .header:before {
             content: "";
             width: 100%;
@@ -43,7 +47,7 @@
             -webkit-backface-visibility: hidden;
             -webkit-transform: translateZ(0);
             backface-visibility: hidden;
-            background: #1B2030 url("../static/images/mayon.jpg") 0% 0 no-repeat;
+            background: #1B2030 var(--header-bg-image) 0% 0 no-repeat;
             background-size: cover;
             background-attachment: fixed;
             animation: pan-image 120s linear infinite alternate;
