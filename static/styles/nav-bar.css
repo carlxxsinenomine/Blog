@@ -1,15 +1,19 @@
 /* Navbar base styles */
 #mainNav {
     transition: all 0.3s ease-in-out;
+    background-color: transparent !important;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
 
 /* Navbar when scrolled */
 #mainNav.navbar-scrolled {
+    background-color: #eee !important;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 /* Logo styles */
@@ -47,13 +51,6 @@
     transition: all 0.2s ease;
 }
 
-.navbar-scrolled {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    background-color: white !important;
-}
-
 .navbar-scrolled .nav-link {
     color: rgba(0, 0, 0, 0.7) !important;
 }
@@ -77,44 +74,4 @@
 .navbar-toggler {
     padding: 0.25rem 0.5rem;
     border: 1px solid transparent;
-}
-
-@media (max-width: 991px) {
-    body {
-        padding-top: 100px; /* or match your navbar's height */
-    }
-
-    .navbar-collapse {
-        width: 100%;
-        padding: 1rem 0;
-    }
-
-    .navbar-nav {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .nav-item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-link {
-        display: block;
-        width: 100%;
-        padding: 1rem 0.5rem; /* Taller touch target */
-        color: #333 !important;
-        font-size: 1rem;
-    }
-
-    .nav-link:hover,
-    .nav-link:active {
-        transform: none !important;
-    }
-
-    .navbar-toggler {
-        margin-left: auto;
-        margin-right: 15px;
-    }
 }
